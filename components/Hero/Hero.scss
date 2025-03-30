@@ -1,0 +1,35 @@
+
+
+.hero__slide-item{
+    height: 600px;
+    @media (max-width: 500px){
+        height: 400px;
+    }
+}
+
+.hero__slide-image{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: top center;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    color: rgb(255, 179, 0);
+    background-color: rgba(0, 0, 0, 0.436);
+    border-radius: 50%;
+    padding: 0.625rem 1.375rem;
+    font-weight: 600;
+    @media (max-width: 767.99px){
+        display: none;
+    }
+}
+
+.swiper-button-prev{
+    transform: translateX(1.875rem);
+}
+
+.swiper-button-next{
+    transform: translateX(-1.875rem);
+}
