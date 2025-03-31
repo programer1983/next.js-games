@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 
 export default function Hero() {
   return (
-    <div className='hero'>
+    <section className='hero'>
         <Swiper
             loop={true}
             slidesPerView={1}
@@ -34,6 +34,6 @@ export default function Hero() {
             </SwiperSlide>
             ))}
        </Swiper>
-    </div>
+    </section>
   )
 }

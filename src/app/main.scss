@@ -8,8 +8,6 @@
   --greenColor: rgb(35, 170, 35);
 }
 
-html{
-}
 
 body{
   font-family: var(--robotoFont);
@@ -21,13 +19,13 @@ body{
   min-height: 100vh;
 }
 
-main {
+
+.main {
   flex-grow: 1;
 }
 
-
 .container{
-    max-height: 1440px;
+    max-width: 1440px;
     padding: 0 20px;
     margin: 0 auto;
 }

@@ -1,9 +1,8 @@
 .geyms{
     background-color: black;
-    padding-top: 6.25rem;
-    min-height: 750vh;
-    @media (max-width: 500px){
-        margin-top: 3.125rem;
+    padding: 6.25rem 0;
+    @media (max-width: 600){
+        padding-top: 4.375rem;
     }
 }
 
@@ -55,6 +54,9 @@
         text-align: center;
         font-weight: bold;
         color: rgb(192, 86, 86);
+        @media (max-width: 900px){
+            font-size: 1.875rem;
+        }
     }
 }
 

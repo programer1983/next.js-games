@@ -12,7 +12,7 @@ export default function Page() {
   console.log("Found game:", geym);
 
   return (
-    <div className='geym'>
+    <section className='geym'>
       <div className="container">
         <div className="geym__inner">
             <div className="geym__images">
@@ -25,6 +25,6 @@ export default function Page() {
             </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
