@@ -1,9 +1,28 @@
+'use client';
+
 import Image from 'next/image'
 import './Header.scss'
 import headerLogo from "./../../public/images/header-logo.png"
 import { headerList } from '../../data'
+import { useEffect, useState } from 'react'
+import Menu from '../Menu/Menu';
 
 export default function Header() {
+  const [menuOpened, setMenuOpened] = useState(false)
+
+  const toggleMenu = () => {
+    setMenuOpened(!menuOpened)
+  }
+
+  useEffect(() => {
+    if (menuOpened) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [menuOpened]);
+
+
   return (
     <header className='header'>
         <div className="container">
@@ -31,7 +50,14 @@ export default function Header() {
                 <div className="header__button-block">
                   <button className='header__button'></button>
                 </div>
+                <div 
+                  className={`header__burger ${menuOpened ? "active" : ""}`}
+                  onClick={toggleMenu}
+                >
+                    <span></span>
+                </div>
             </div>
+            <Menu menuOpened={menuOpened} toggleMenu={toggleMenu}/>
         </div>
     </header>
   )

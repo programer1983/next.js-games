@@ -1,6 +1,8 @@
 .header{
     background-color: rgb(22, 22, 75);
     padding: 0.9375rem 3.125rem;
+    position: relative;
+    z-index: 3; 
     @media (max-width: 720px){
         padding: 0.9375rem 0.625rem;
     }
@@ -10,6 +12,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+   
 }
 
 .header__logo{
@@ -45,6 +49,9 @@
     width: 4.375rem;
     display: flex;
     align-items: center;
+    @media (max-width: 720px){
+        display: none;
+    }
 }
 
 .header__button{
@@ -54,3 +61,55 @@
     height: 1.5625rem;
     width: 1.5625rem;
 }
+
+.header__burger {
+    display: none;
+    width: 50px;
+    height: 22px;
+    padding-top: 10px;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+    @media (max-width: 720px){
+        display: flex;
+    }
+}
+.header__burger span {
+    background-color: var(--whiteColor);
+    width: 70%;
+    height: 2px;
+    transform: scale(1);
+}
+
+.header__burger::before,
+.header__burger::after {
+    content: "";
+    background-color: var(--whiteColor);
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    transition: all .3s ease;
+}
+
+.header__burger::before {
+    top: 0;
+}
+
+.header__burger::after {
+    bottom: 0;
+}
+
+.active.header__burger span {
+    transform: scale(0);
+}
+
+.active.header__burger::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.active.header__burger::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+

@@ -7,8 +7,6 @@ import { heroImages } from '../../data'
 import { Navigation} from 'swiper/modules';
 import 'swiper/css/navigation';
 
-
-
 export default function Hero() {
   return (
     <section className='hero'>
