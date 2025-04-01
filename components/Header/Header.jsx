@@ -23,6 +23,25 @@ export default function Header() {
   }, [menuOpened]);
 
 
+
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setIsDarkMode(savedTheme === 'dark');
+    }
+  }, []);
+
+ 
+  const toggleTheme = () => {
+    const newTheme = !isDarkMode ? 'dark' : 'light';
+    setIsDarkMode(!isDarkMode);
+    localStorage.setItem('theme', newTheme);
+    document.body.classList.toggle('dark-theme', !isDarkMode);
+  };
+
+
   return (
     <header className='header'>
         <div className="container">
@@ -47,14 +66,28 @@ export default function Header() {
                         })}
                     </ul>
                 </nav>
-                <div className="header__button-block">
-                  <button className='header__button'></button>
-                </div>
-                <div 
-                  className={`header__burger ${menuOpened ? "active" : ""}`}
-                  onClick={toggleMenu}
-                >
-                    <span></span>
+                <div className='header__button-buttons'>
+                    <div
+                        className={`theme-switcher ${isDarkMode ? 'dark' : 'light'}`}
+                        onClick={toggleTheme}
+                        style={{
+                          marginRight: '70px',
+                          padding: '10px',
+                          backgroundColor: '#fff',
+                          borderRadius: '50%',
+                          cursor: 'pointer',
+                          transition: 'all 0.3s ease',
+                          transform: `translateX(${isDarkMode ? '0' : '50px'})`, 
+                    }}
+                  >
+                      {isDarkMode ? '🌙' : '🌞'}
+                  </div>
+                  <div 
+                      className={`header__burger ${menuOpened ? "active" : ""}`}
+                      onClick={toggleMenu}
+                    >
+                        <span></span>
+                    </div>
                 </div>
             </div>
             <Menu menuOpened={menuOpened} toggleMenu={toggleMenu}/>

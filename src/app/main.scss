@@ -8,10 +8,17 @@
   --greenColor: rgb(35, 170, 35);
 }
 
-
 body{
   font-family: var(--robotoFont);
   overflow-x: hidden;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  color: #121212;
+}
+
+body.dark-theme {
+  background-color: #121212;
+  color: #fff;
 }
 
 .wrapper{
@@ -19,7 +26,6 @@ body{
   flex-direction: column;
   min-height: 100vh;
 }
-
 
 .main {
   flex-grow: 1;

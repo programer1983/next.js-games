@@ -1,7 +1,9 @@
 .header{
-    background-color: rgb(22, 22, 75);
+    background-color: rgba(22, 22, 75, 0.475);
     padding: 0.9375rem 3.125rem;
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
     z-index: 3; 
     @media (max-width: 720px){
         padding: 0.9375rem 0.625rem;
@@ -12,12 +14,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-   
+    position: relative;
+    z-index: 2;
 }
 
 .header__logo{
     object-fit: cover;
+    @media (max-width: 400px){
+        transform: translateX(-30px);
+    }
 }
 
 .header__list{
@@ -30,6 +35,11 @@
     }
 }
 
+.header__button-buttons{
+    display: flex;
+    align-items: center;
+}
+
 
 .header__link{
     font-size: 1.5625rem;
@@ -40,26 +50,6 @@
     &:hover{
         border-color: var(--orangeColor);
     }
-}
-
-.header__button-block{
-    background-color: rgb(255, 179, 0);
-    padding: 0.3125rem  0.625rem;
-    border-radius: 1.25rem;
-    width: 4.375rem;
-    display: flex;
-    align-items: center;
-    @media (max-width: 720px){
-        display: none;
-    }
-}
-
-.header__button{
-    border: none;
-    background-color: var(--whiteColor);
-    border-radius: 50%;
-    height: 1.5625rem;
-    width: 1.5625rem;
 }
 
 .header__burger {

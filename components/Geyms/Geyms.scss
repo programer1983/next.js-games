@@ -1,8 +1,7 @@
 .geyms{
-    background-color: black;
     padding: 6.25rem 0;
-    @media (max-width: 600){
-        padding-top: 4.375rem;
+    @media (max-width: 767.98){
+        padding-top: 3.125rem;
     }
 }
 
@@ -20,9 +19,10 @@
 
 .geyms__inner{
     display: grid;
-    grid-template-columns:  repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 1.25rem;
     row-gap: 4.375rem;
+
     @media (max-width: 1300px){
         grid-template-columns:  repeat(2, 1fr);
     }
@@ -31,13 +31,15 @@
     }
 }
 
+.geyms__item{
+}
 
-.geym__image{
+.geyms__image{
    height: 353px;
    overflow: hidden;
 }
 
-.geym__img{
+.geyms__img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -47,7 +49,7 @@
     }
 }
 
-.geym__info{
+.geyms__info{
     margin-top: 1.875rem;
     h2{
         font-size: 2.1875rem;
@@ -60,7 +62,7 @@
     }
 }
 
-.geym__info-detail{
+.geyms__info-detail{
     margin-top: 1.25rem;
     display: flex;
     justify-content: space-between;

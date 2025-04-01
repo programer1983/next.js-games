@@ -2,7 +2,7 @@
 }
 
 .hero__slide-item{
-    height: 600px;
+    height: 700px;
     @media (max-width: 500px){
         height: 400px;
     }
@@ -34,3 +34,24 @@
 .swiper-button-next{
     transform: translateX(-1.875rem);
 }
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 20px !important;
+    text-align: center;
+  }
+  
+  .swiper-pagination .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background-color: green; 
+    opacity: 9;
+    margin: 0 5px; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #ff6600;
+    opacity: 1;
+    transform: scale(1.3);
+  }
