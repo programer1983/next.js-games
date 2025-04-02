@@ -1,6 +1,11 @@
 .geym{
-    padding: 6.25rem  0;
-    background-color: black;
+    padding-bottom: 6.25rem;
+    padding-top: 10.625rem;
+    background-color: var(--whiteColor);
+}
+
+.geym.dark-bg{
+    background-color: #121212;
 }
 
 .geym__inner{

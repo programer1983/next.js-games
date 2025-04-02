@@ -3,16 +3,17 @@
 import { useParams } from 'next/navigation';
 import { geymData } from '../../../../data';
 import './../../../../components/Geym/Geym.scss'
+import { useTheme } from '../../../../components/Context/ThemeProvider';
 
 export default function Page() {
   const params = useParams();
   const { id } = params;
+  const {isDarkMode} = useTheme()
 
   const geym = geymData[0]?.results?.find((g) => String(g.slug) === String(id));
-  console.log("Found game:", geym);
-
+ 
   return (
-    <section className='geym'>
+    <section className={`geym ${isDarkMode ? 'dark-bg' : ""}`}>
       <div className="container">
         <div className="geym__inner">
             <div className="geym__images">

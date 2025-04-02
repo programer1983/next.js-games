@@ -1,6 +1,7 @@
 import "./globals.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import ThemeProvider from "../../components/Context/ThemeProvider";
 
 
 export const metadata = {
@@ -9,14 +10,17 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <body className='body'>
+      <ThemeProvider>
         <div className="wrapper">
           <Header />
             {children}
           <Footer />
         </div>
+      </ThemeProvider>
       </body>
     </html>
   );

@@ -6,6 +6,7 @@ import Hero from "../../components/Hero/Hero";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import useDarkMode from "../../Hooks/useDarkMode";
 
 
 export default function Home() {
@@ -23,6 +24,8 @@ export default function Home() {
     }
     initAos()
   }, [])
+
+ 
 
 
   return (

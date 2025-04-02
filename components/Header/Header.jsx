@@ -6,9 +6,12 @@ import headerLogo from "./../../public/images/header-logo.png"
 import { headerList } from '../../data'
 import { useEffect, useState } from 'react'
 import Menu from '../Menu/Menu';
+import { useTheme } from '../Context/ThemeProvider';
+
 
 export default function Header() {
   const [menuOpened, setMenuOpened] = useState(false)
+  const {isDarkMode, toggleTheme} = useTheme();
 
   const toggleMenu = () => {
     setMenuOpened(!menuOpened)
@@ -21,26 +24,6 @@ export default function Header() {
       document.body.style.overflow = 'auto';
     }
   }, [menuOpened]);
-
-
-
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setIsDarkMode(savedTheme === 'dark');
-    }
-  }, []);
-
- 
-  const toggleTheme = () => {
-    const newTheme = !isDarkMode ? 'dark' : 'light';
-    setIsDarkMode(!isDarkMode);
-    localStorage.setItem('theme', newTheme);
-    document.body.classList.toggle('dark-theme', !isDarkMode);
-  };
-
 
   return (
     <header className='header'>
@@ -78,8 +61,8 @@ export default function Header() {
                           cursor: 'pointer',
                           transition: 'all 0.3s ease',
                           transform: `translateX(${isDarkMode ? '0' : '50px'})`, 
-                    }}
-                  >
+                      }}
+                    >
                       {isDarkMode ? '🌙' : '🌞'}
                   </div>
                   <div 
