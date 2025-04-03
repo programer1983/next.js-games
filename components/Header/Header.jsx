@@ -40,11 +40,11 @@ export default function Header() {
                     <ul className="header__list">
                         {headerList.map((item) => {
                             return (
-                                <li key={item.title} className="header__item">
-                                    <a href={item.link} className="header__link">
-                                        {item.title}
-                                    </a>
-                                </li>
+                              <li key={item.title} className="header__item">
+                                  <a href={item.link} className="header__link">
+                                      {item.title}
+                                  </a>
+                              </li>
                             )
                         })}
                     </ul>
@@ -66,7 +66,7 @@ export default function Header() {
                       {isDarkMode ? '🌙' : '🌞'}
                   </div>
                   <div 
-                      className={`header__burger ${menuOpened ? "active" : ""}`}
+                      className={`header__burger ${menuOpened ? "active" : ""} ${isDarkMode ? "dark__btn" : ""}`}
                       onClick={toggleMenu}
                     >
                         <span></span>

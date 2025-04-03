@@ -27,7 +27,7 @@ export default function Hero() {
 
 
   return (
-    <section className='hero'>
+    <section className='hero' id="hero">
         <Swiper
             loop={true}
             slidesPerView={1}

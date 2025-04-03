@@ -1,3 +1,5 @@
+
+
 .mobile__menu, .mobile__none {
     position: fixed;
     left: -100%;
@@ -10,6 +12,12 @@
     background-color: black;
     overflow-y: auto;
     transition: .5s ease;
+    &.light__bg{
+        background-color: var(--whiteColor);
+        .mobile__link{
+            color: var(--backgroundColor);
+        }
+    }
 }
 
 .mobile__none{

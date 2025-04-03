@@ -6,7 +6,7 @@ import './Geyms.scss'
 export default function Geyms() {
 
   return (
-    <section className='geyms'>
+    <section className='geyms' id="geyms">
          <div className="container">
             <h2 className='geyms__title'>Available games</h2>
             <div className="geyms__inner">

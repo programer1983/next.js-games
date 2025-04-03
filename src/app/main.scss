@@ -6,19 +6,23 @@
   --whiteColor: #fff;
   --orangeColor: rgb(255, 179, 0);
   --greenColor: rgb(35, 170, 35);
+  --backgroundColor: #121212;
+}
+html{
+  scroll-behavior: smooth;
 }
 
 body{
   font-family: var(--robotoFont);
   overflow-x: hidden;
   transition: all 0.3s ease;
-  background-color: #fff;
-  color: #121212;
+  background-color: var( --whiteColor);
+  color: var(--backgroundColor);
 }
 
 body.dark-theme {
-  background-color: #121212 !important;
-  color: #fff !important;
+  background-color: var(--backgroundColor);
+  color: var(--whiteColor);
 }
 
 .wrapper{

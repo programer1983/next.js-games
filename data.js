@@ -3,15 +3,15 @@
 export const headerList = [
     {
         title: 'Home',
-        link: "/",
+        link: "#hero",
     },
     {
         title: 'About',
-        link: '/about'
+        link: '#geyms'
     },
     {
         title: 'Contact',
-        link: '/contact'
+        link: '#footer'
     }
 ]
 

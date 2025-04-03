@@ -15,15 +15,16 @@ export default function Page() {
   return (
     <section className={`geym ${isDarkMode ? 'dark-bg' : ""}`}>
       <div className="container">
+        <a href="/" className="geym__button">Back To Home</a>
         <div className="geym__inner">
-            <div className="geym__images">
-                <img src={geym.background_image} alt={geym.name} />
-            </div>
-            <div className="geym__info">
-              <h2>{geym.name}</h2>
-              <h3>Genre: <span>{geym.genres[0]?.name}</span></h3>
-              <p>Ratings: <span>{geym.ratings_count}</span></p>
-            </div>
+          <div className="geym__images">
+              <img src={geym.background_image} alt={geym.name} />
+          </div>
+          <div className="geym__info">
+            <h2>{geym.name}</h2>
+            <h3>Genre: <span>{geym.genres[0]?.name}</span></h3>
+            <p>Ratings: <span>{geym.ratings_count}</span></p>
+          </div>
         </div>
       </div>
     </section>

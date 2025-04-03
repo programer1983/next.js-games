@@ -8,7 +8,7 @@ import footerLogo from  './../../public/images/header-logo.png'
 
 export default function Footer() {
   return (
-    <footer className='footer'>
+    <footer className='footer' id="footer">
       <div className="container">
         <div className="footer__inner">
             <img src='/images/header-logo.png' alt="footer-logo" className="footer__logo" />
