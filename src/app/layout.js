@@ -1,8 +1,6 @@
 import "./globals.scss";
-import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import ThemeProvider from "../../components/Context/ThemeProvider";
-
 
 export const metadata = {
   title: "Create Next App",
@@ -10,17 +8,15 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
   return (
     <html lang="en">
-      <body className='body'>
-      <ThemeProvider>
-        <div className="wrapper">
-          <Header />
+      <body className="body">
+        <ThemeProvider>
+          <div className="wrapper">
             {children}
-          <Footer />
-        </div>
-      </ThemeProvider>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
