@@ -15,6 +15,11 @@ export const headerList = [
 
 export const heroImages = [
   {
+    id: 3,
+    imageUrl: "/images/hero-image-4.jpg",
+    alt: "hero-image",
+  },
+  {
     id: 1,
     imageUrl: "/images/hero-image-2.jpg",
     alt: "hero-image",
@@ -22,11 +27,6 @@ export const heroImages = [
   {
     id: 2,
     imageUrl: "/images/hero-image-3.jpg",
-    alt: "hero-image",
-  },
-  {
-    id: 3,
-    imageUrl: "/images/hero-image-4.jpg",
     alt: "hero-image",
   },
 ];
