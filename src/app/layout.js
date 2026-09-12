@@ -1,7 +1,6 @@
 // import "./globals.scss";
 import "./reset.scss"; // Сначала сброс
 import "./main.scss"; // Потом основные стили
-import "./globals.scss";
 import Footer from "../../components/Footer/Footer";
 import ThemeProvider from "../../components/Context/ThemeProvider";
 
